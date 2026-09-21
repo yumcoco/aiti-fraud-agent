@@ -1,0 +1,10 @@
+mkdir -p scripts
+mkdir -p data/paysim data/synthetic data/processed
+mkdir -p backend/models backend/tools backend/internal_api
+mkdir -p producer
+mkdir -p frontend
+mkdir -p tests/evaluation
+touch backend/__init__.py
+touch backend/models/__init__.py
+touch backend/tools/__init__.py
+touch backend/internal_api/__init__.py
