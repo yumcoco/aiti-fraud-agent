@@ -14,8 +14,13 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('token')
-      window.location.href = '/'
+      const token = localStorage.getItem('token')
+      if (token) {
+        // 已登录状态收到 401 才跳转
+        localStorage.removeItem('token')
+        window.location.href = '/'
+      }
+      // 登录时的 401 直接 reject，让 LoginPage 的 catch 处理
     }
     return Promise.reject(err)
   }

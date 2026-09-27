@@ -1,6 +1,3 @@
-# @Versin:1.0
-# @Author:Sha Li
-
 import json
 import asyncio
 from typing import Optional, AsyncGenerator
@@ -8,11 +5,7 @@ from anthropic import Anthropic
 from backend.config import llm, pg
 from backend.internal_api.graph_service import query_account_network
 from backend.internal_api.feature_store import get_account_features
-from backend.tools.scoring_tool import score_transaction
-from backend.models.tool_outputs import GraphResult, ProfileResult
-from backend.models.transaction import Transaction
 from backend.logger import get_logger, generate_trace_id
-from datetime import datetime
 import psycopg2
 
 client = Anthropic()
@@ -28,11 +21,12 @@ You can answer questions about:
 - Block rate trends and statistics
 - Specific transaction decisions
 
-You ONLY answer questions related to fraud investigation and compliance.
-For unrelated questions, politely redirect: "I'm a fraud investigation assistant. I can only help with account risk analysis and fraud investigation."
-
+When asked about block rates, statistics, or recent activity, use the Global statistics provided in the context.
 When referencing data, always cite the source (graph analysis, risk profile, or decision log).
 Keep answers concise and evidence-based.
+
+You ONLY answer questions related to fraud investigation and compliance.
+For unrelated questions, politely redirect: "I'm a fraud investigation assistant. I can only help with account risk analysis and fraud investigation."
 """
 
 
@@ -82,7 +76,51 @@ def save_message(session_id: str, role: str, content: str, username: str):
 def gather_context(message: str, account_context: Optional[str]) -> str:
     context_parts = []
 
-    # Extract account ID from message or context
+    try:
+        conn = get_db_conn()
+        cur = conn.cursor()
+
+        # Global statistics
+        cur.execute("""
+            SELECT
+                COUNT(*) as total,
+                SUM(CASE WHEN decision='block' THEN 1 ELSE 0 END) as blocked,
+                AVG(risk_score) as avg_score
+            FROM decisions
+            WHERE created_at > NOW() - INTERVAL '24 hours'
+        """)
+        stats = cur.fetchone()
+        if stats and stats[0] > 0:
+            block_rate = round((stats[1] or 0) / stats[0] * 100, 2)
+            context_parts.append(f"""
+Global statistics (last 24h):
+- Total transactions: {stats[0]}
+- Blocked: {stats[1] or 0}
+- Block rate: {block_rate}%
+- Avg risk score: {round(float(stats[2] or 0), 3)}
+""")
+
+        # Recent blocks
+        cur.execute("""
+            SELECT account_id, risk_score, triggered_rules, created_at
+            FROM decisions
+            WHERE decision = 'block'
+            ORDER BY created_at DESC
+            LIMIT 5
+        """)
+        blocks = cur.fetchall()
+        if blocks:
+            block_text = "\n".join([
+                f"  - {b[0]} score={b[1]} at {b[3]}"
+                for b in blocks
+            ])
+            context_parts.append(f"Recent blocked accounts:\n{block_text}")
+
+        conn.close()
+    except Exception as e:
+        log.error("chat", status="db_context_failed", error=str(e))
+
+    # Account-specific context
     import re
     account_ids = re.findall(r'C\d{7,10}', message)
     if account_context:
@@ -111,14 +149,14 @@ Risk profile for {account_id}:
 - Cross-account ratio: {profile.get('cross_account_transfer_ratio', 0):.0%}
 """)
 
-        # Recent decisions
+        # Recent decisions for this account
         try:
             conn = get_db_conn()
             cur = conn.cursor()
             cur.execute("""
                 SELECT decision, risk_score, triggered_rules, created_at
                 FROM decisions WHERE account_id = %s
-                ORDER BY created_at DESC LIMIT 3
+                ORDER BY created_at DESC LIMIT 10
             """, (account_id,))
             decisions = cur.fetchall()
             conn.close()
@@ -135,46 +173,40 @@ Risk profile for {account_id}:
 
 
 async def handle_chat_stream(
-        session_id: str,
-        message: str,
-        account_context: Optional[str] = None,
-        username: str = "investigator"
+    session_id: str,
+    message: str,
+    account_context: Optional[str] = None,
+    username: str = "investigator"
 ) -> AsyncGenerator[str, None]:
+
     trace_id = generate_trace_id(session_id)
     log.info("chat", status="start", session_id=session_id, trace_id=trace_id)
 
-    # Save user message
     save_message(session_id, "user", message, username)
-
-    # Get conversation history
     history = get_session_history(session_id)
 
-    # Gather real-time context
     yield f"data: {json.dumps({'type': 'status', 'content': 'Gathering context...'})}\n\n"
     await asyncio.sleep(0)
 
     context = gather_context(message, account_context)
 
-    # Build messages
-    messages = history[:-1] if history else []  # exclude last (just saved)
-
+    messages = history[:-1] if history else []
     user_content = message
     if context:
         user_content = f"{message}\n\nRelevant data:\n{context}"
 
     messages.append({"role": "user", "content": user_content})
 
-    # Stream response
     full_response = ""
     yield f"data: {json.dumps({'type': 'status', 'content': 'Analyzing...'})}\n\n"
     await asyncio.sleep(0)
 
     try:
         with client.messages.stream(
-                model=llm["decision_model"],
-                max_tokens=1024,
-                system=SYSTEM_PROMPT,
-                messages=messages
+            model=llm["decision_model"],
+            max_tokens=1024,
+            system=SYSTEM_PROMPT,
+            messages=messages
         ) as stream:
             for text in stream.text_stream:
                 full_response += text
@@ -186,8 +218,6 @@ async def handle_chat_stream(
         yield f"data: {json.dumps({'type': 'error', 'content': str(e)})}\n\n"
         return
 
-    # Save assistant response
     save_message(session_id, "assistant", full_response, username)
-
     yield f"data: {json.dumps({'type': 'done'})}\n\n"
     log.info("chat", status="complete", session_id=session_id, trace_id=trace_id)

@@ -13,7 +13,9 @@ from backend.internal_api.feature_store import get_account_features
 from backend.logger import get_logger, generate_trace_id
 from backend.internal_api.feature_store import load_features, get_account_features
 from backend.internal_api.blacklist import load_blacklist, get_blacklist, is_blacklisted
-
+from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).parent.parent / ".env")
 # 在模块级别加载
 load_features()
 load_blacklist()
@@ -45,7 +47,12 @@ def save_decision(decision_data: dict):
         ) VALUES (
             %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
         )
-        ON CONFLICT (transaction_id) DO NOTHING
+        ON CONFLICT (transaction_id) DO UPDATE SET
+            sar_report = EXCLUDED.sar_report,
+            report_status = EXCLUDED.report_status,
+            decision = EXCLUDED.decision,
+            risk_score = EXCLUDED.risk_score,
+            triggered_rules = EXCLUDED.triggered_rules
     """, (
         decision_data["transaction_id"],
         decision_data["account_id"],

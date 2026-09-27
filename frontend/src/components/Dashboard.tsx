@@ -4,6 +4,7 @@ import MetricCards from './MetricCards'
 import TransactionFeed from './TransactionFeed'
 import BlockRateChart from './BlockRateChart'
 import ChatPanel from './ChatPanel'
+import SARModal from './SARModal'
 
 interface Decision {
   transaction_id: string
@@ -18,11 +19,13 @@ interface Decision {
   created_at: string
 }
 
-export default function Dashboard() {
+export default function Dashboard({ onLogout }: { onLogout: () => void }) {
   const [decisions, setDecisions] = useState<Decision[]>([])
   const [selected, setSelected] = useState<Decision | null>(null)
   const [sarExpanded, setSarExpanded] = useState(false)
+  const [sarModalOpen, setSarModalOpen] = useState(false)
   const [fiuStatus, setFiuStatus] = useState<string | null>(null)
+  const [triggerMessage, setTriggerMessage] = useState<string | null>(null)
 
   const fetchDecisions = useCallback(async () => {
     try {
@@ -42,7 +45,11 @@ export default function Dashboard() {
   const handleSelect = (d: Decision) => {
     setSelected(d)
     setSarExpanded(d.decision === 'block')
+    setSarModalOpen(false)
     setFiuStatus(null)
+    if (d.decision === 'pass') {
+      setTriggerMessage(`Analyze account ${d.account_id}`)
+    }
   }
 
   const handleFIU = async () => {
@@ -65,19 +72,22 @@ export default function Dashboard() {
         padding: '0 20px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ color: '#fff', fontWeight: 700, fontSize: 16 }}>ING</span>
+          <span style={{ color: '#fff', fontWeight: 700, fontSize: 16 }}>@ Sha Li</span>
           <span style={{ color: 'rgba(255,255,255,0.5)' }}>|</span>
           <span style={{ color: '#fff', fontSize: 13 }}>FEC Fraud Intelligence Platform</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#7FFF7F' }} />
           <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 11 }}>Live</span>
-          <div style={{
-            width: 28, height: 28, borderRadius: '50%',
-            background: 'rgba(255,255,255,0.2)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 11, fontWeight: 600,
-          }}>AD</div>
+          <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 11 }}>admin</span>
+          <button
+            onClick={() => { localStorage.removeItem('token'); onLogout() }}
+            style={{
+              background: 'rgba(255,255,255,0.15)', color: '#fff',
+              border: '0.5px solid rgba(255,255,255,0.3)',
+              borderRadius: 'var(--radius-sm)', padding: '4px 10px', fontSize: 11,
+            }}
+          >Sign out</button>
         </div>
       </div>
 
@@ -130,6 +140,11 @@ export default function Dashboard() {
                       padding: '3px 8px', borderRadius: 3,
                     }}>{fiuStatus}</span>
                   )}
+                  <button onClick={() => setSarModalOpen(true)} style={{
+                    background: 'transparent', color: 'var(--ing)',
+                    border: '0.5px solid var(--ing)',
+                    borderRadius: 'var(--radius-sm)', padding: '5px 10px', fontSize: 11,
+                  }}>Full view</button>
                   <button onClick={handleFIU} style={{
                     background: 'var(--ing)', color: '#fff', border: 'none',
                     borderRadius: 'var(--radius-sm)', padding: '5px 12px',
@@ -166,8 +181,25 @@ export default function Dashboard() {
         </div>
 
         {/* Right: Chat */}
-        <ChatPanel accountContext={selected?.account_id || null} />
+        <ChatPanel
+          accountContext={selected?.account_id || null}
+          triggerMessage={triggerMessage}
+          onTriggerConsumed={() => setTriggerMessage(null)}
+        />
       </div>
+
+      {/* SAR Modal */}
+      {sarModalOpen && selected && (
+        <SARModal
+          report={selected.sar_report}
+          accountId={selected.account_id}
+          riskScore={selected.risk_score || 0}
+          transactionId={selected.transaction_id}
+          onClose={() => setSarModalOpen(false)}
+          onSubmitFIU={handleFIU}
+          fiuStatus={fiuStatus}
+        />
+      )}
     </div>
   )
 }

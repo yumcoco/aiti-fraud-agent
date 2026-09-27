@@ -72,7 +72,7 @@ async def get_recent_decisions(
     cur.execute("""
         SELECT transaction_id, account_id, dest_account, amount,
                transaction_type, decision, risk_score, triggered_rules,
-               report_status, model_version, trace_id, created_at
+               report_status, model_version, trace_id, created_at, sar_report
         FROM decisions
         ORDER BY created_at DESC
         LIMIT %s
@@ -93,7 +93,8 @@ async def get_recent_decisions(
             "report_status": r[8],
             "model_version": r[9],
             "trace_id": r[10],
-            "created_at": r[11].isoformat() if r[11] else None
+            "created_at": r[11].isoformat() if r[11] else None,
+            "sar_report": r[12]
         }
         for r in rows
     ]

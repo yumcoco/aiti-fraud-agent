@@ -14,6 +14,8 @@ interface Session {
 
 interface Props {
   accountContext: string | null
+  triggerMessage?: string | null
+  onTriggerConsumed?: () => void
 }
 
 const DEFAULT_CHIPS = [
@@ -24,7 +26,7 @@ const DEFAULT_CHIPS = [
   'Explain fraud ring detection',
 ]
 
-export default function ChatPanel({ accountContext }: Props) {
+export default function ChatPanel({ accountContext, triggerMessage, onTriggerConsumed }: Props) {
   const [sessions, setSessions] = useState<Session[]>([
     { id: 'session-001', title: 'New investigation', messageCount: 0 }
   ])
@@ -41,6 +43,13 @@ export default function ChatPanel({ accountContext }: Props) {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  useEffect(() => {
+    if (triggerMessage && !isStreaming) {
+      sendMessage(triggerMessage)
+      onTriggerConsumed?.()
+    }
+  }, [triggerMessage])
 
   const sendMessage = (text: string) => {
     if (!text.trim() || isStreaming) return
