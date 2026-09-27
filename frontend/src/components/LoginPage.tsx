@@ -37,7 +37,7 @@ export default function LoginPage({ onLogin }: Props) {
 
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <div style={{ fontSize: 32, fontWeight: 700, color: 'var(--ing)', marginBottom: 4 }}>
-            FEC Fraud Intelligence
+            Anti-Fraud Intelligence Agent
           </div>
           <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 4 }}>
             Investigator portal
@@ -128,7 +128,7 @@ export default function LoginPage({ onLogin }: Props) {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: 16, fontSize: 11, color: 'var(--text-muted)' }}>
-          Unauthorised access will be logged and reported
+          Developer @ Sha Li
         </div>
       </div>
     </div>
