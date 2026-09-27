@@ -1,10 +1,39 @@
-mkdir -p scripts
-mkdir -p data/paysim data/synthetic data/processed
-mkdir -p backend/models backend/tools backend/internal_api
-mkdir -p producer
-mkdir -p frontend
-mkdir -p tests/evaluation
-touch backend/__init__.py
-touch backend/models/__init__.py
-touch backend/tools/__init__.py
-touch backend/internal_api/__init__.py
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+*.env
+venv/
+env/
+
+# Data (too large for git)
+data/paysim/
+data/processed/
+data/synthetic/
+data/neo4j/
+data/postgres/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Config files with secrets
+config.yaml
+docker-compose.yml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
