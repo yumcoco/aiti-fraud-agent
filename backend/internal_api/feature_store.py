@@ -33,10 +33,14 @@ def get_account_features(account_id: str) -> Optional[dict]:
         return None
 
     row = rows.iloc[0]
+    avg = float(row.get("avg_amount", 0.0))
+    current_max = float(row.get("max_amount", 0.0))
+    deviation = round(current_max / avg, 2) if avg > 0 else 0.0
+
     return {
         "days_since_open":              int(row.get("days_since_open", 0)),
-        "avg_transaction_amount":       float(row.get("avg_amount", 0.0)),
-        "amount_deviation_ratio":       float(row.get("amount_deviation", 0.0)),
+        "avg_transaction_amount":       avg,
+        "amount_deviation_ratio":       deviation,
         "night_transaction_ratio":      float(row.get("night_ratio", 0.0)),
         "cross_account_transfer_ratio": float(row.get("cross_ratio", 0.0)),
         "transaction_frequency_7d":     int(row.get("freq_7d", 0)),

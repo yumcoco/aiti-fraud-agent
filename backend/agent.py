@@ -7,6 +7,8 @@ from backend.tools.profile_tool import get_risk_profile
 from backend.tools.scoring_tool import score_transaction
 from backend.tools.report_tool import generate_sar_report
 from backend.logger import get_logger
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # ── State definition ──────────────────────────────────────────────

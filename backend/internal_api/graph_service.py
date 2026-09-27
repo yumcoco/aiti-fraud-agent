@@ -30,9 +30,9 @@ def query_account_network(account_id: str, hop_depth: int = 2) -> Optional[dict]
         driver = get_driver()
         with driver.session() as session:
 
-            # 查询1：两跳内关联账户 + 图算法结果
-            related = session.run("""
-                MATCH (a:Account {id: $account_id})-[*1..$depth]-(related:Account)
+            # 查询1：两跳内关联账户
+            related = session.run(f"""
+                MATCH (a:Account {{id: $account_id}})-[*1..{hop_depth}]-(related:Account)
                 WHERE related.id <> $account_id
                 RETURN DISTINCT
                     related.id AS related_id,
@@ -40,8 +40,7 @@ def query_account_network(account_id: str, hop_depth: int = 2) -> Optional[dict]
                     related.pagerank AS centrality
                 ORDER BY centrality DESC
                 LIMIT $limit
-            """, account_id=account_id, depth=hop_depth,
-                limit=20).data()
+            """, account_id=account_id, limit=20).data()
 
             # 查询2：共享设备
             devices = session.run("""
