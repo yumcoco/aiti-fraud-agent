@@ -25,14 +25,13 @@ Production-oriented fraud investigation platform for bank FEC teams. Combines Py
 - **Infrastructure** — Docker Compose
 
 ---
+## Key Features
 
-## Key features
-
-- Deterministic rules engine pre-filters 90%+ of transactions before any LLM call
-- LangGraph 4-node agent: graph query → risk profile → scoring → SAR generation
-- Neo4j fraud ring detection with Louvain community detection and PageRank
-- SAR reports with post-generation grounding verification
-- Real-time investigation chat with SSE streaming and session memory
+- **Fraud Detection:** Deterministic risk scoring combined with Neo4j fraud-ring analysis using Louvain community detection and PageRank
+- **Agent Orchestration:** LangGraph-based workflow connecting graph queries, risk profiling, scoring, and SAR generation
+- **Data & Tool Integration:** PySpark transaction features and Neo4j graph signals exposed through typed FastAPI tools with Pydantic validation and fallback handling
+- **Evidence-Grounded SARs:** Suspicious Activity Reports with post-generation grounding verification to ensure findings are supported by retrieved evidence
+- **Interactive Investigation:** Real-time investigation chat with SSE streaming and session memory for follow-up analysis
 
 ---
 
