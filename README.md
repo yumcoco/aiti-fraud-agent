@@ -12,7 +12,8 @@ Production-oriented fraud investigation platform for bank FEC teams. Combines Py
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
-![SAR Report](docs/screenshots/sar-report.png)
+<img width="1448" height="795" alt="image" src="https://github.com/user-attachments/assets/472f3344-e53c-471d-bbcf-a3564f19324a" />
+
 
 ---
 
