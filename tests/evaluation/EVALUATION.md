@@ -68,16 +68,28 @@ Three controlled experiments, single variable each:
 
 ---
 
-## Layer 3 — LLM-as-Judge SAR quality (9 reports)
+## Layer 3 — LLM-as-Judge SAR quality
 
 **Method:** Second Claude Haiku instance scores each SAR on 4 dimensions (1-5)
 
+**Three prompt iterations (controlled experiment):**
+
+| Version | Change | Evidence | Logic | Fields | Grounding | Overall |
+|---|---|---|---|---|---|---|
+| v1 (baseline) | Original prompt | 4.11 | 4.67 | 5.00 | 3.22 | 4.25 |
+| v2 | Add strict grounding rules | 4.11 | 4.00 | 5.00 | 3.67 | 4.19 |
+| v3 (final) | Add actionable recommendation guidance | 4.33 | 3.56 | 5.00 | 4.11 | 4.25 |
+
+**Key finding:** Grounding and Logical consistency trade-off — stricter factual constraints improve Grounding (+0.89) but reduce Logic (-1.11) as recommendations become more mechanical. v3 selected: Grounding accuracy prioritised over reasoning depth in compliance contexts; human reviewers supplement judgement.
+
+**Final scores (v3):**
+
 | Dimension | Score | Description |
 |---|---|---|
-| Evidence completeness | 4.11 / 5.0 | All triggered signals cited with source |
-| Logical consistency | 4.67 / 5.0 | Recommended action matches risk level |
+| Evidence completeness | 4.33 / 5.0 | All triggered signals cited with source |
+| Logical consistency | 3.56 / 5.0 | Recommended action matches risk level |
 | Required fields | 5.00 / 5.0 | All SAR fields present |
-| Grounding accuracy | 3.22 / 5.0 | No facts beyond tool-returned data |
+| Grounding accuracy | 4.11 / 5.0 | No facts beyond tool-returned data |
 | **Overall** | **4.25 / 5.0** | **Target ≥ 4.0 ✓** |
 
 Grounding accuracy is the lowest dimension — optimization opportunity: tightening prompt constraints to prevent LLM from adding contextual inference beyond explicit tool outputs.
