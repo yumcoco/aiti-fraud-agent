@@ -1,10 +1,10 @@
 {
   "summary": {
     "total_reports": 9,
-    "avg_evidence": 4.11,
-    "avg_logic": 4.67,
+    "avg_evidence": 4.33,
+    "avg_logic": 3.56,
     "avg_fields": 5.0,
-    "avg_grounding": 3.22,
+    "avg_grounding": 4.11,
     "overall": 4.25,
     "target": 4.0,
     "passed": true
@@ -15,28 +15,16 @@
       "account_id": "C1194310018",
       "scores": {
         "evidence": 4,
-        "logic": 4,
+        "logic": 2,
         "fields": 5,
         "grounding": 4
       },
-      "average": 4.25,
+      "average": 3.75,
       "report_status": "verified"
     },
     {
       "case_id": "eval_003",
       "account_id": "C895065191",
-      "scores": {
-        "evidence": 4,
-        "logic": 5,
-        "fields": 5,
-        "grounding": 2
-      },
-      "average": 4.0,
-      "report_status": "verified"
-    },
-    {
-      "case_id": "eval_004",
-      "account_id": "C767812247",
       "scores": {
         "evidence": 5,
         "logic": 5,
@@ -44,6 +32,18 @@
         "grounding": 5
       },
       "average": 5.0,
+      "report_status": "verified"
+    },
+    {
+      "case_id": "eval_004",
+      "account_id": "C767812247",
+      "scores": {
+        "evidence": 4,
+        "logic": 5,
+        "fields": 5,
+        "grounding": 4
+      },
+      "average": 4.5,
       "report_status": "verified"
     },
     {
@@ -62,12 +62,12 @@
       "case_id": "eval_006",
       "account_id": "C94208509",
       "scores": {
-        "evidence": 4,
-        "logic": 5,
+        "evidence": 5,
+        "logic": 4,
         "fields": 5,
-        "grounding": 2
+        "grounding": 5
       },
-      "average": 4.0,
+      "average": 4.75,
       "report_status": "verified"
     },
     {
@@ -75,11 +75,11 @@
       "account_id": "C818466696",
       "scores": {
         "evidence": 4,
-        "logic": 3,
+        "logic": 2,
         "fields": 5,
         "grounding": 4
       },
-      "average": 4.0,
+      "average": 3.75,
       "report_status": "verified"
     },
     {
@@ -87,11 +87,11 @@
       "account_id": "C1340929577",
       "scores": {
         "evidence": 4,
-        "logic": 5,
+        "logic": 2,
         "fields": 5,
         "grounding": 3
       },
-      "average": 4.25,
+      "average": 3.5,
       "report_status": "verified"
     },
     {
@@ -99,23 +99,23 @@
       "account_id": "C2137896854",
       "scores": {
         "evidence": 4,
-        "logic": 5,
+        "logic": 2,
         "fields": 5,
-        "grounding": 2
+        "grounding": 4
       },
-      "average": 4.0,
+      "average": 3.75,
       "report_status": "verified"
     },
     {
       "case_id": "eval_010",
       "account_id": "C1460810398",
       "scores": {
-        "evidence": 4,
+        "evidence": 5,
         "logic": 5,
         "fields": 5,
-        "grounding": 4
+        "grounding": 5
       },
-      "average": 4.5,
+      "average": 5.0,
       "report_status": "verified"
     }
   ]

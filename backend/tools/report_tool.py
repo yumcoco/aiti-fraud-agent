@@ -23,8 +23,16 @@ def generate_sar_report(
     case_id = f"SAR-{datetime.date.today().strftime('%Y')}-{uuid.uuid4().hex[:4].upper()}"
 
     prompt = f"""You are a bank compliance officer. Generate a SAR report using ONLY the data provided below.
-Do NOT invent or add any information not present in the data.
-If a field is unavailable, write "data unavailable".
+
+STRICT GROUNDING RULES:
+- Every sentence must reference a specific field from the evidence data below
+- Do NOT use phrases like 'consistent with patterns', 'typically associated with', 'often indicates', 'atypical of standard behaviour'
+- Do NOT add industry context, general knowledge, or inferences beyond the data
+- Do NOT interpret what signals mean beyond what the data explicitly states
+- If a field is unavailable, write "data unavailable"
+- Every numerical claim must come directly from the evidence data
+- Describe WHAT the data shows, not WHAT it implies
+- For the Recommended action: be specific and actionable based on the risk signals found in the data (e.g. freeze account, escalate to compliance, expand investigation to related accounts)
 
 TRANSACTION DATA:
 - Transaction ID: {tx.transaction_id}
@@ -58,17 +66,17 @@ Amount: [amount]
 Timestamp: [timestamp]
 
 Suspicious behaviour:
-[2-3 sentences describing the suspicious behaviour based on the data]
+[2-3 sentences describing ONLY what the data shows, no inferences]
 
 Evidence chain:
-1. [evidence from graph data]
-2. [evidence from graph data]
-3. [evidence from profile data]
-4. [evidence from profile data]
-5. [evidence from score]
+1. [evidence from graph data with specific values]
+2. [evidence from graph data with specific values]
+3. [evidence from profile data with specific values]
+4. [evidence from profile data with specific values]
+5. [evidence from score with specific values]
 
 Risk level: HIGH
-Recommended action: [specific action based on evidence]
+Recommended action: [2-3 specific actions: account freeze, investigation scope, regulatory filing if applicable]
 """
 
     for attempt in range(llm["max_retries"]):
