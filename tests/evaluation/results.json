@@ -1,0 +1,514 @@
+{
+  "metrics": {
+    "recall": 0.88,
+    "precision": 0.88,
+    "f1": 0.88,
+    "tp": 22,
+    "tn": 22,
+    "fp": 3,
+    "fn": 3,
+    "total": 50
+  },
+  "results": [
+    {
+      "id": "eval_001",
+      "account_id": "C2026720299",
+      "expected": "block",
+      "predicted": "pass",
+      "correct": false,
+      "risk_score": 0.48,
+      "duration_s": 0.33,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_002",
+      "account_id": "C1194310018",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 12.56,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_003",
+      "account_id": "C895065191",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "duration_s": 11.11,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_004",
+      "account_id": "C767812247",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.73,
+      "duration_s": 12.71,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_005",
+      "account_id": "C1723063411",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.78,
+      "duration_s": 13.07,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_006",
+      "account_id": "C94208509",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.68,
+      "duration_s": 12.46,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_007",
+      "account_id": "C818466696",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 13.59,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_008",
+      "account_id": "C1340929577",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 10.96,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_009",
+      "account_id": "C2137896854",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.55,
+      "duration_s": 12.08,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_010",
+      "account_id": "C1460810398",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "duration_s": 13.79,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_011",
+      "account_id": "C327855497",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "duration_s": 14.67,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_012",
+      "account_id": "C1968752639",
+      "expected": "block",
+      "predicted": "pass",
+      "correct": false,
+      "risk_score": 0.35,
+      "duration_s": 0.32,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_013",
+      "account_id": "C2106211047",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "duration_s": 12.58,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_014",
+      "account_id": "C574846060",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "duration_s": 10.96,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_015",
+      "account_id": "C1587381716",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 11.15,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_016",
+      "account_id": "C1672263305",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "duration_s": 12.38,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_017",
+      "account_id": "C1887925622",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 12.44,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_018",
+      "account_id": "C1659569966",
+      "expected": "block",
+      "predicted": "pass",
+      "correct": false,
+      "risk_score": 0.35,
+      "duration_s": 0.31,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_019",
+      "account_id": "C408988375",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.68,
+      "duration_s": 11.39,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_020",
+      "account_id": "C1006058561",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "duration_s": 13.06,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_021",
+      "account_id": "C1261111835",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "duration_s": 10.12,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_022",
+      "account_id": "C1776675634",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 12.19,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_023",
+      "account_id": "C1107109708",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "duration_s": 11.98,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_024",
+      "account_id": "C443233087",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.73,
+      "duration_s": 13.17,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_025",
+      "account_id": "C353183181",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.6,
+      "duration_s": 13.81,
+      "is_fraud": true
+    },
+    {
+      "id": "eval_026",
+      "account_id": "C1722983268",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "duration_s": 13.73,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_027",
+      "account_id": "C1392547189",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.34,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_028",
+      "account_id": "C387307282",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.5,
+      "duration_s": 0.31,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_029",
+      "account_id": "C2082113126",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.3,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_030",
+      "account_id": "C589762916",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.29,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_031",
+      "account_id": "C177748369",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.2,
+      "duration_s": 0.32,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_032",
+      "account_id": "C1939497850",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.29,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_033",
+      "account_id": "C61966824",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.28,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_034",
+      "account_id": "C775531351",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "duration_s": 12.43,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_035",
+      "account_id": "C1816662312",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.31,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_036",
+      "account_id": "C199082844",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.58,
+      "duration_s": 11.64,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_037",
+      "account_id": "C403823544",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.33,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_038",
+      "account_id": "C608503347",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.77,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_039",
+      "account_id": "C1765214032",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.3,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_040",
+      "account_id": "C1841693307",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.3,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_041",
+      "account_id": "C1014147845",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "duration_s": 0.29,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_042",
+      "account_id": "C1089960917",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.2,
+      "duration_s": 0.31,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_043",
+      "account_id": "C949880814",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.2,
+      "duration_s": 0.29,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_044",
+      "account_id": "C931441605",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.5,
+      "duration_s": 0.3,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_045",
+      "account_id": "C862819341",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.5,
+      "duration_s": 0.31,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_046",
+      "account_id": "C969923966",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.32,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_047",
+      "account_id": "C399278998",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.45,
+      "duration_s": 0.32,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_048",
+      "account_id": "C1714493853",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.5,
+      "duration_s": 0.33,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_049",
+      "account_id": "C1290405268",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.2,
+      "duration_s": 0.3,
+      "is_fraud": false
+    },
+    {
+      "id": "eval_050",
+      "account_id": "C1521239542",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.2,
+      "duration_s": 0.31,
+      "is_fraud": false
+    }
+  ]
+}
