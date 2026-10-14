@@ -19,6 +19,7 @@ def load_features() -> None:
         return
 
     _df = pd.read_parquet(PARQUET_PATH)
+    _df = _df.set_index("account_id")
     log.info("feature_store", status="loaded", rows=len(_df))
 
 
@@ -27,7 +28,10 @@ def get_account_features(account_id: str) -> Optional[dict]:
         log.warning("feature_store", status="not_loaded", account_id=account_id)
         return None
 
-    rows = _df[_df["account_id"] == account_id]
+    try:
+        rows = _df.loc[[account_id]]
+    except KeyError:
+        rows = pd.DataFrame()
     if rows.empty:
         log.warning("feature_store", status="account_not_found", account_id=account_id)
         return None

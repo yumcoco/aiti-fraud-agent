@@ -123,3 +123,41 @@ Grounding accuracy is the lowest dimension — optimization opportunity: tighten
 2. **Graph coverage:** Extend Neo4j window beyond 30 days to capture more fraud ring relationships
 3. **Recall ceiling:** Current 0.88 is constrained by PaySim's network-coordination fraud pattern; behaviour-anomaly fraud would benefit from additional profile signals
 
+
+---
+
+## System latency
+
+| Component | Latency |
+|---|---|
+| Rules engine | < 10ms |
+| Neo4j graph query | p50 8ms · p95 13ms |
+| Agent end-to-end (pass, no SAR) | ~330ms |
+| Agent end-to-end (block, with SAR) | ~11.4s |
+| SAR generation (Claude Sonnet) | ~11s |
+| Parquet feature lookup | ~300ms |
+
+SAR generation dominates block-path latency. Pass-path (majority of production traffic) completes in < 350ms.
+
+---
+
+## Performance optimisation
+
+**Bottleneck identified:** Parquet feature lookup using full table scan O(n) → ~300ms per query
+
+**Fix:** Set account_id as DataFrame index → O(1) lookup
+
+| Metric | Before | After | Improvement |
+|---|---|---|---|
+| Feature lookup p50 | ~300ms | 0.42ms | -99.9% |
+| Agent pass latency | ~330ms | ~14ms | -96% |
+
+**Final latency profile:**
+
+| Component | Latency |
+|---|---|
+| Rules engine | < 10ms |
+| Neo4j graph query | p50 8ms · p95 13ms |
+| Feature lookup | p50 0.42ms · p95 0.54ms |
+| Agent end-to-end (pass) | ~14ms |
+| Agent end-to-end (block, with SAR) | ~11.4s |
