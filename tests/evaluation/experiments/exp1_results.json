@@ -1,0 +1,707 @@
+{
+  "experiment": "exp1_pagerank_threshold_05",
+  "change": "pagerank threshold 0.7 \u2192 0.5",
+  "metrics": {
+    "recall": 0.92,
+    "precision": 0.548,
+    "f1": 0.687,
+    "tp": 23,
+    "tn": 6,
+    "fp": 19,
+    "fn": 2
+  },
+  "results": [
+    {
+      "id": "eval_001",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.63,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_002",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_003",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_004",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_005",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.78,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_006",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_007",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_008",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_009",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.55,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_010",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_011",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_012",
+      "expected": "block",
+      "predicted": "pass",
+      "correct": false,
+      "risk_score": 0.5,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_013",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_014",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_015",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_016",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.8,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_017",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_018",
+      "expected": "block",
+      "predicted": "pass",
+      "correct": false,
+      "risk_score": 0.5,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_019",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.83,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_020",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_021",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_022",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_023",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_024",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.88,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_025",
+      "expected": "block",
+      "predicted": "block",
+      "correct": true,
+      "risk_score": 0.75,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "account_age < 30",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_026",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_027",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_028",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.65,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_029",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_030",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_031",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_032",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_033",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_034",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_035",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_036",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.73,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "night_ratio > 50%",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_037",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_038",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_039",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_040",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_041",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_042",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_043",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_044",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.65,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_045",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.65,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_046",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_047",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.6,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_048",
+      "expected": "pass",
+      "predicted": "block",
+      "correct": false,
+      "risk_score": 0.65,
+      "triggered": [
+        "shared_device >= 2",
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000",
+        "type = TRANSFER"
+      ]
+    },
+    {
+      "id": "eval_049",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    },
+    {
+      "id": "eval_050",
+      "expected": "pass",
+      "predicted": "pass",
+      "correct": true,
+      "risk_score": 0.35,
+      "triggered": [
+        "pagerank > 0.5",
+        "community_detected",
+        "amount > 10000"
+      ]
+    }
+  ]
+}

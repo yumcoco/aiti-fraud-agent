@@ -1,0 +1,802 @@
+[
+  {
+    "id": "eval_001",
+    "transaction": {
+      "transaction_id": "EVAL_C2026720299_0",
+      "account_id": "C2026720299",
+      "dest_account": "C669965600",
+      "amount": 188249.17,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T04:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 188249.17,
+    "type": "TRANSFER",
+    "step": 122
+  },
+  {
+    "id": "eval_002",
+    "transaction": {
+      "transaction_id": "EVAL_C1194310018_1",
+      "account_id": "C1194310018",
+      "dest_account": "C299514580",
+      "amount": 4075956.58,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T13:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 4075956.58,
+    "type": "CASH_OUT",
+    "step": 227
+  },
+  {
+    "id": "eval_003",
+    "transaction": {
+      "transaction_id": "EVAL_C895065191_2",
+      "account_id": "C895065191",
+      "dest_account": "C317556709",
+      "amount": 322991.82,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T07:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 322991.82,
+    "type": "CASH_OUT",
+    "step": 317
+  },
+  {
+    "id": "eval_004",
+    "transaction": {
+      "transaction_id": "EVAL_C767812247_3",
+      "account_id": "C767812247",
+      "dest_account": "C263239858",
+      "amount": 17569.42,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T07:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 17569.42,
+    "type": "TRANSFER",
+    "step": 149
+  },
+  {
+    "id": "eval_005",
+    "transaction": {
+      "transaction_id": "EVAL_C1723063411_4",
+      "account_id": "C1723063411",
+      "dest_account": "C1565674952",
+      "amount": 493.28,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T07:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 493.28,
+    "type": "TRANSFER",
+    "step": 317
+  },
+  {
+    "id": "eval_006",
+    "transaction": {
+      "transaction_id": "EVAL_C94208509_5",
+      "account_id": "C94208509",
+      "dest_account": "C777880922",
+      "amount": 1399637.19,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T06:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1399637.19,
+    "type": "CASH_OUT",
+    "step": 124
+  },
+  {
+    "id": "eval_007",
+    "transaction": {
+      "transaction_id": "EVAL_C818466696_6",
+      "account_id": "C818466696",
+      "dest_account": "C2025446764",
+      "amount": 497526.17,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T14:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 497526.17,
+    "type": "CASH_OUT",
+    "step": 228
+  },
+  {
+    "id": "eval_008",
+    "transaction": {
+      "transaction_id": "EVAL_C1340929577_7",
+      "account_id": "C1340929577",
+      "dest_account": "C1754723066",
+      "amount": 5614246.07,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T17:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 5614246.07,
+    "type": "CASH_OUT",
+    "step": 303
+  },
+  {
+    "id": "eval_009",
+    "transaction": {
+      "transaction_id": "EVAL_C2137896854_8",
+      "account_id": "C2137896854",
+      "dest_account": "C857500368",
+      "amount": 498183.25,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T16:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 498183.25,
+    "type": "TRANSFER",
+    "step": 590
+  },
+  {
+    "id": "eval_010",
+    "transaction": {
+      "transaction_id": "EVAL_C1460810398_9",
+      "account_id": "C1460810398",
+      "dest_account": "C725953073",
+      "amount": 10000000.0,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T04:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 10000000.0,
+    "type": "CASH_OUT",
+    "step": 698
+  },
+  {
+    "id": "eval_011",
+    "transaction": {
+      "transaction_id": "EVAL_C327855497_10",
+      "account_id": "C327855497",
+      "dest_account": "C2013390104",
+      "amount": 10000000.0,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T15:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 10000000.0,
+    "type": "TRANSFER",
+    "step": 421
+  },
+  {
+    "id": "eval_012",
+    "transaction": {
+      "transaction_id": "EVAL_C1968752639_11",
+      "account_id": "C1968752639",
+      "dest_account": "C2133429010",
+      "amount": 248071.56,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T21:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 248071.56,
+    "type": "CASH_OUT",
+    "step": 259
+  },
+  {
+    "id": "eval_013",
+    "transaction": {
+      "transaction_id": "EVAL_C2106211047_12",
+      "account_id": "C2106211047",
+      "dest_account": "C1629558772",
+      "amount": 8104557.88,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T11:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 8104557.88,
+    "type": "TRANSFER",
+    "step": 681
+  },
+  {
+    "id": "eval_014",
+    "transaction": {
+      "transaction_id": "EVAL_C574846060_13",
+      "account_id": "C574846060",
+      "dest_account": "C1073035418",
+      "amount": 1938347.14,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-16T00:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1938347.14,
+    "type": "TRANSFER",
+    "step": 670
+  },
+  {
+    "id": "eval_015",
+    "transaction": {
+      "transaction_id": "EVAL_C1587381716_14",
+      "account_id": "C1587381716",
+      "dest_account": "C228027702",
+      "amount": 49210.21,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T12:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 49210.21,
+    "type": "CASH_OUT",
+    "step": 274
+  },
+  {
+    "id": "eval_016",
+    "transaction": {
+      "transaction_id": "EVAL_C1672263305_15",
+      "account_id": "C1672263305",
+      "dest_account": "C1495920841",
+      "amount": 7603589.38,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T21:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 7603589.38,
+    "type": "TRANSFER",
+    "step": 523
+  },
+  {
+    "id": "eval_017",
+    "transaction": {
+      "transaction_id": "EVAL_C1887925622_16",
+      "account_id": "C1887925622",
+      "dest_account": "C128909445",
+      "amount": 856386.66,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T21:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 856386.66,
+    "type": "CASH_OUT",
+    "step": 187
+  },
+  {
+    "id": "eval_018",
+    "transaction": {
+      "transaction_id": "EVAL_C1659569966_17",
+      "account_id": "C1659569966",
+      "dest_account": "C1072956803",
+      "amount": 1032168.79,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T11:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1032168.79,
+    "type": "CASH_OUT",
+    "step": 441
+  },
+  {
+    "id": "eval_019",
+    "transaction": {
+      "transaction_id": "EVAL_C408988375_18",
+      "account_id": "C408988375",
+      "dest_account": "C131871009",
+      "amount": 1205760.86,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T09:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1205760.86,
+    "type": "CASH_OUT",
+    "step": 487
+  },
+  {
+    "id": "eval_020",
+    "transaction": {
+      "transaction_id": "EVAL_C1006058561_19",
+      "account_id": "C1006058561",
+      "dest_account": "C235524557",
+      "amount": 348983.86,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T11:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 348983.86,
+    "type": "CASH_OUT",
+    "step": 561
+  },
+  {
+    "id": "eval_021",
+    "transaction": {
+      "transaction_id": "EVAL_C1261111835_20",
+      "account_id": "C1261111835",
+      "dest_account": "C340862934",
+      "amount": 594229.77,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T05:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 594229.77,
+    "type": "TRANSFER",
+    "step": 195
+  },
+  {
+    "id": "eval_022",
+    "transaction": {
+      "transaction_id": "EVAL_C1776675634_21",
+      "account_id": "C1776675634",
+      "dest_account": "C1757751807",
+      "amount": 841052.98,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T18:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 841052.98,
+    "type": "CASH_OUT",
+    "step": 64
+  },
+  {
+    "id": "eval_023",
+    "transaction": {
+      "transaction_id": "EVAL_C1107109708_22",
+      "account_id": "C1107109708",
+      "dest_account": "C2110704276",
+      "amount": 1506795.1,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T10:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1506795.1,
+    "type": "TRANSFER",
+    "step": 464
+  },
+  {
+    "id": "eval_024",
+    "transaction": {
+      "transaction_id": "EVAL_C443233087_23",
+      "account_id": "C443233087",
+      "dest_account": "C1597258791",
+      "amount": 1631640.02,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T07:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 1631640.02,
+    "type": "TRANSFER",
+    "step": 53
+  },
+  {
+    "id": "eval_025",
+    "transaction": {
+      "transaction_id": "EVAL_C353183181_24",
+      "account_id": "C353183181",
+      "dest_account": "C2040628937",
+      "amount": 4129482.96,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T17:34:00"
+    },
+    "expected_decision": "block",
+    "is_fraud": true,
+    "amount": 4129482.96,
+    "type": "CASH_OUT",
+    "step": 351
+  },
+  {
+    "id": "eval_026",
+    "transaction": {
+      "transaction_id": "EVAL_C1722983268_25",
+      "account_id": "C1722983268",
+      "dest_account": "C2110501036",
+      "amount": 114086.08,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T21:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 114086.08,
+    "type": "CASH_OUT",
+    "step": 259
+  },
+  {
+    "id": "eval_027",
+    "transaction": {
+      "transaction_id": "EVAL_C1392547189_26",
+      "account_id": "C1392547189",
+      "dest_account": "C1843278807",
+      "amount": 91426.97,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T15:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 91426.97,
+    "type": "CASH_OUT",
+    "step": 397
+  },
+  {
+    "id": "eval_028",
+    "transaction": {
+      "transaction_id": "EVAL_C387307282_27",
+      "account_id": "C387307282",
+      "dest_account": "C760959631",
+      "amount": 27864.67,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T20:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 27864.67,
+    "type": "TRANSFER",
+    "step": 210
+  },
+  {
+    "id": "eval_029",
+    "transaction": {
+      "transaction_id": "EVAL_C2082113126_28",
+      "account_id": "C2082113126",
+      "dest_account": "C1894969740",
+      "amount": 254055.54,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T22:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 254055.54,
+    "type": "CASH_OUT",
+    "step": 308
+  },
+  {
+    "id": "eval_030",
+    "transaction": {
+      "transaction_id": "EVAL_C589762916_29",
+      "account_id": "C589762916",
+      "dest_account": "C1547230458",
+      "amount": 127819.4,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T15:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 127819.4,
+    "type": "CASH_OUT",
+    "step": 37
+  },
+  {
+    "id": "eval_031",
+    "transaction": {
+      "transaction_id": "EVAL_C177748369_30",
+      "account_id": "C177748369",
+      "dest_account": "C2053296647",
+      "amount": 204789.76,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T19:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 204789.76,
+    "type": "CASH_OUT",
+    "step": 137
+  },
+  {
+    "id": "eval_032",
+    "transaction": {
+      "transaction_id": "EVAL_C1939497850_31",
+      "account_id": "C1939497850",
+      "dest_account": "C1079720093",
+      "amount": 121990.26,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T17:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 121990.26,
+    "type": "CASH_OUT",
+    "step": 159
+  },
+  {
+    "id": "eval_033",
+    "transaction": {
+      "transaction_id": "EVAL_C61966824_32",
+      "account_id": "C61966824",
+      "dest_account": "C1744716517",
+      "amount": 258218.09,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T19:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 258218.09,
+    "type": "CASH_OUT",
+    "step": 281
+  },
+  {
+    "id": "eval_034",
+    "transaction": {
+      "transaction_id": "EVAL_C775531351_33",
+      "account_id": "C775531351",
+      "dest_account": "C2130517359",
+      "amount": 194629.74,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T20:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 194629.74,
+    "type": "CASH_OUT",
+    "step": 714
+  },
+  {
+    "id": "eval_035",
+    "transaction": {
+      "transaction_id": "EVAL_C1816662312_34",
+      "account_id": "C1816662312",
+      "dest_account": "C1982630903",
+      "amount": 271730.34,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T18:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 271730.34,
+    "type": "CASH_OUT",
+    "step": 400
+  },
+  {
+    "id": "eval_036",
+    "transaction": {
+      "transaction_id": "EVAL_C199082844_35",
+      "account_id": "C199082844",
+      "dest_account": "C2015263217",
+      "amount": 143997.31,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T02:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 143997.31,
+    "type": "TRANSFER",
+    "step": 216
+  },
+  {
+    "id": "eval_037",
+    "transaction": {
+      "transaction_id": "EVAL_C403823544_36",
+      "account_id": "C403823544",
+      "dest_account": "C1550549457",
+      "amount": 498384.09,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T17:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 498384.09,
+    "type": "CASH_OUT",
+    "step": 687
+  },
+  {
+    "id": "eval_038",
+    "transaction": {
+      "transaction_id": "EVAL_C608503347_37",
+      "account_id": "C608503347",
+      "dest_account": "C1694415785",
+      "amount": 124741.48,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T21:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 124741.48,
+    "type": "CASH_OUT",
+    "step": 403
+  },
+  {
+    "id": "eval_039",
+    "transaction": {
+      "transaction_id": "EVAL_C1765214032_38",
+      "account_id": "C1765214032",
+      "dest_account": "C915765640",
+      "amount": 279583.7,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T11:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 279583.7,
+    "type": "CASH_OUT",
+    "step": 33
+  },
+  {
+    "id": "eval_040",
+    "transaction": {
+      "transaction_id": "EVAL_C1841693307_39",
+      "account_id": "C1841693307",
+      "dest_account": "C1814087388",
+      "amount": 170458.49,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T14:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 170458.49,
+    "type": "CASH_OUT",
+    "step": 300
+  },
+  {
+    "id": "eval_041",
+    "transaction": {
+      "transaction_id": "EVAL_C1014147845_40",
+      "account_id": "C1014147845",
+      "dest_account": "C545182016",
+      "amount": 87427.32,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T22:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 87427.32,
+    "type": "CASH_OUT",
+    "step": 332
+  },
+  {
+    "id": "eval_042",
+    "transaction": {
+      "transaction_id": "EVAL_C1089960917_41",
+      "account_id": "C1089960917",
+      "dest_account": "C1300043923",
+      "amount": 250061.16,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T13:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 250061.16,
+    "type": "CASH_OUT",
+    "step": 179
+  },
+  {
+    "id": "eval_043",
+    "transaction": {
+      "transaction_id": "EVAL_C949880814_42",
+      "account_id": "C949880814",
+      "dest_account": "C342383615",
+      "amount": 116477.42,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T15:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 116477.42,
+    "type": "CASH_OUT",
+    "step": 373
+  },
+  {
+    "id": "eval_044",
+    "transaction": {
+      "transaction_id": "EVAL_C931441605_43",
+      "account_id": "C931441605",
+      "dest_account": "C204535683",
+      "amount": 238737.85,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T18:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 238737.85,
+    "type": "TRANSFER",
+    "step": 400
+  },
+  {
+    "id": "eval_045",
+    "transaction": {
+      "transaction_id": "EVAL_C862819341_44",
+      "account_id": "C862819341",
+      "dest_account": "C1053618974",
+      "amount": 388345.24,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T13:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 388345.24,
+    "type": "TRANSFER",
+    "step": 275
+  },
+  {
+    "id": "eval_046",
+    "transaction": {
+      "transaction_id": "EVAL_C969923966_45",
+      "account_id": "C969923966",
+      "dest_account": "C1070027487",
+      "amount": 86095.32,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T22:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 86095.32,
+    "type": "CASH_OUT",
+    "step": 284
+  },
+  {
+    "id": "eval_047",
+    "transaction": {
+      "transaction_id": "EVAL_C399278998_46",
+      "account_id": "C399278998",
+      "dest_account": "C1516363854",
+      "amount": 337104.86,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T18:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 337104.86,
+    "type": "CASH_OUT",
+    "step": 352
+  },
+  {
+    "id": "eval_048",
+    "transaction": {
+      "transaction_id": "EVAL_C1714493853_47",
+      "account_id": "C1714493853",
+      "dest_account": "C1698701388",
+      "amount": 5806609.27,
+      "type": "TRANSFER",
+      "timestamp": "2024-01-15T13:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 5806609.27,
+    "type": "TRANSFER",
+    "step": 347
+  },
+  {
+    "id": "eval_049",
+    "transaction": {
+      "transaction_id": "EVAL_C1290405268_48",
+      "account_id": "C1290405268",
+      "dest_account": "C1413294639",
+      "amount": 123035.06,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T19:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 123035.06,
+    "type": "CASH_OUT",
+    "step": 305
+  },
+  {
+    "id": "eval_050",
+    "transaction": {
+      "transaction_id": "EVAL_C1521239542_49",
+      "account_id": "C1521239542",
+      "dest_account": "C1476284597",
+      "amount": 96284.86,
+      "type": "CASH_OUT",
+      "timestamp": "2024-01-15T15:34:00"
+    },
+    "expected_decision": "pass",
+    "is_fraud": false,
+    "amount": 96284.86,
+    "type": "CASH_OUT",
+    "step": 325
+  }
+]
